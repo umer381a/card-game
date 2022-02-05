@@ -29,9 +29,7 @@ const App: React.FC = () => {
   const handleSubmit = (e: any) => {
     e.prevetDefault();
   };
-  const handleCardSelect = (card: any) => {
-    setCard(card);
-  };
+
   return (
     <div className="grid grid-cols-2 gap-8 m-5 ">
       <div>
@@ -45,7 +43,7 @@ const App: React.FC = () => {
         />
       </div>
       <div>
-        <Details cards={cards} handleCardSelect={handleCardSelect} />
+        <Details cards={cards} setCard={setCard} />
       </div>
     </div>
   );

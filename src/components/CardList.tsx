@@ -2,15 +2,15 @@ import { card } from "../model";
 
 type CardListPorps = {
   cards: card[];
-  handleCardSelect: (card: any) => void;
+  setCard: React.Dispatch<React.SetStateAction<card | undefined>>;
 };
 
-const CardList = ({ cards, handleCardSelect }: CardListPorps) => {
+const CardList = ({ cards, setCard }: CardListPorps) => {
   return (
     <div className=" grid grid-cols-3 gap-2 ">
       {cards.map((card) => (
         <button
-          onClick={(e) => handleCardSelect(card)}
+          onClick={(e) => setCard(card)}
           key={card.id}
           className="border bg-amber-300 hover:bg-amber-500 "
         >
