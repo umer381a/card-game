@@ -1,7 +1,7 @@
-import { Props } from "./model";
+import { card } from "../model";
 
 type CardListPorps = {
-  cards: Props[];
+  cards: card[];
   handleCardSelect: (card: any) => void;
 };
 

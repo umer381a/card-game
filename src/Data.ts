@@ -1,7 +1,5 @@
-import { Props } from "./model"
-
-
-const Data:Props[] = [
+import { card } from "./model"
+const Data:card[] = [
 	{
 		"id":1,
 		"realName": "Brianna",

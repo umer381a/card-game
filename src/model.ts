@@ -1,4 +1,4 @@
-export type Props = {
+export type card = {
     id?: number;
     realName: string;
     playerName: string;

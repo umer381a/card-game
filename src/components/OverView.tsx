@@ -1,7 +1,7 @@
-import { Props } from "./model";
+import { card } from "../model";
 
 type OverViewProps = {
-  card: Props | undefined;
+  card: card | undefined;
 };
 const OverView = ({ card }: OverViewProps) => {
   return (

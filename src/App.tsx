@@ -1,14 +1,13 @@
 import Controls from "./components/Controls";
 import Details from "./components/Details";
 import OverView from "./components/OverView";
-import Data from "./components/Data";
+import Data from "./Data";
 import { useState } from "react";
-import { Props } from "./components/model";
+import { card } from "./model";
 
 const App: React.FC = () => {
-  const [cards, setCards] = useState<Props[]>(Data);
-  const [card, setCard] = useState<Props | undefined>();
-  //const [select, setSelect] = useState<boolean>(false);
+  const [cards, setCards] = useState<card[]>(Data);
+  const [card, setCard] = useState<card | undefined>();
   const handleAsc = () => {
     const result = cards.sort((a, b) => (a.playerName > b.playerName ? 1 : -1));
     setCards([...result]);
@@ -17,6 +16,16 @@ const App: React.FC = () => {
     const result = cards.sort((a, b) => (a.playerName < b.playerName ? 1 : -1));
     setCards([...result]);
   };
+
+  // const handleSort = (direction: 'asc' | 'desc') => {
+  //   let result = [...cards]
+  //   if (direction === 'asc') {
+  //     result = cards.sort((a, b) => (a.playerName > b.playerName ? 1 : -1));
+  //   } else {
+  //     result = cards.sort((a, b) => (a.playerName < b.playerName ? 1 : -1));
+  //   }
+  //   setCard
+  // }
   const handleSubmit = (e: any) => {
     e.prevetDefault();
   };
